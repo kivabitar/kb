@@ -5,6 +5,8 @@ import Loading from './loading';
 import News from './acf/news.js';
 import Testimonial from './acf/testimonial.js';
 import SplitPanel from './acf/splitpanel.js';
+import Form from './simpleform.js';
+import Fiftyfifty from './acf/fiftyfifty.js'
 import sdata from './data/home.json';
 
 class Home extends React.Component{
@@ -32,7 +34,7 @@ class Home extends React.Component{
     }
   }
   fillPage(obj){
-    //console.log(obj);
+    console.log(obj);
     let pageStuff = [];
     let i=0;
 
@@ -60,6 +62,18 @@ class Home extends React.Component{
       if(a.acf_fc_layout === 'testimonials_grid'){
       //  console.log(a);
         pageStuff.push(<Testimonial {...a} key={i} />);
+        i++
+
+      }
+      if(a.acf_fc_layout === 'half'){
+      //  console.log(a);
+        pageStuff.push(<Fiftyfifty {...a} key={i} />);
+        i++
+
+      }
+      if(a.acf_fc_layout === 'normal_content'){
+      //  console.log(a);
+        pageStuff.push(<Form {...a} key={i} />);
         i++
 
       }
@@ -104,7 +118,7 @@ class Home extends React.Component{
     return(
       <div className="home " style={styles}>
         {this.renderPage()}
-      
+
       </div>
     )
   }

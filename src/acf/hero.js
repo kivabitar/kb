@@ -5,10 +5,10 @@ import HTML2React from 'html2react'
 function Hero(props){
 //const Html2React = libraries.html2react.Component;
 
-  console.log(props)
+  //console.log(props)
 
   // Load the post, but only if the data is ready.
-  console.log(props.height);
+//  console.log(props.height);
 const hstyle = {
   minHeight: 460
 }

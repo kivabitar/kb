@@ -23,7 +23,7 @@ img{
 	@include animation(
 		fade-in
 		ease
-		500ms 
+		500ms
 		forwards
 	);
 }
@@ -52,7 +52,7 @@ section{
 	}
 	@include bp-large{
 		padding:0;
-	}   
+	}
 }
 .topwrap{
 	padding-top:0 !important;
@@ -74,7 +74,7 @@ section{
 		padding-top:18px !important;
 		background-size:100% 665px;
 	}
-	@include bp-xlarge{	
+	@include bp-xlarge{
 		padding-top:0px !important;
 	}
 	@include bp-xxlarge{
@@ -134,7 +134,7 @@ section{
 }
 .button-cta {
     margin: 0 auto;
-    
+
     background-image: url('/wp-content/themes/decoder/library/images/arrow-right.png');
     background-position: 95% 50%;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@ section{
     }
     .cta-head {
         margin: 12px 0 2px;
-       
+
         @include bp-small{
             font-size: .9em !important;
             white-space: normal;
@@ -173,7 +173,7 @@ section{
         border-color: $secondary;
         color: $white;
     }
-    
+
 }
 /* HERO */
 .hero {
@@ -423,13 +423,13 @@ section{
 	   color: $white;
 	}
 	:-moz-placeholder { /* Firefox 18- */
-	   color: $white;  
+	   color: $white;
 	}
 	::-moz-placeholder {  /* Firefox 19+ */
-	   color: $white;  
+	   color: $white;
 	}
-	:-ms-input-placeholder {  
-	   color: $white;  
+	:-ms-input-placeholder {
+	   color: $white;
 	}
 }
 .ism-website-display{
@@ -570,7 +570,7 @@ section{
     }
     .row{
         @include bp-xlarge{
-           max-width: 960px; 
+           max-width: 960px;
         }
     }
 }
@@ -626,7 +626,7 @@ section{
             }
         }
         @include bp-medium{
-            display:table;  
+            display:table;
             .uni-logo{
                 display:table-cell;
                 min-height:60px;
@@ -676,7 +676,7 @@ section{
 }
 .bg{
     background-color:rgba(106,116,124,.8);
-    
+
     text-align: center;
     p{
         color:$white !important;
@@ -755,7 +755,7 @@ section{
     padding-right: .25em;
 }
 .link-cols{
-  padding:50px 0;  
+  padding:50px 0;
 }
 .link-cols ul{
     list-style-image: url('/wp-content/themes/kivab/library/images/arrow.png');
@@ -780,9 +780,47 @@ section{
     max-width:740px;
     margin:auto;
 }
+.button{
+   text-decoration: none;
+   padding:12px 26px;
+   text-transform: uppercase;
+   background-color:$primary;
+   font-size: .9em;
+   font-weight: 600;
+   letter-spacing: 2px;
+   color:#fff;
+   &:after{
+       content:'';
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid #fff;
+        display:inline-block;
+        margin:6px 0 0 10px;
+        @include transition(all);
+   }
+   &.orange{
+        background-color: $secondary;
+        &:hover{
+            &:after{
+                border-left: 4px solid $primary;
+            }
+        }
+
+   }
+   &.green{
+        background-color: $primary;
+        &:hover{
+            &:after{
+                border-left: 4px solid $primary;
+            }
+        }
+   }
+}
 .home-form .gform_title{
     font-size:25px !important;
-    color: #c4d92e !important; 
+    color: #c4d92e !important;
     text-align: center !important;
 }
 #gform_submit_button_1{
@@ -841,7 +879,7 @@ section{
     color:#fff;
 }
 .col-img{
-     max-width: 100%; 
+     max-width: 100%;
      display:block;
      margin:0 auto 0;
 }
@@ -1009,7 +1047,7 @@ section{
     background-color:#c4d92e;
     color:#fff;
     border-radius: 50%;
-    cursor:pointer; 
+    cursor:pointer;
     overflow: visible;
     margin:-15px 0 0 -15px;
     animation: pulse 1s infinite;
@@ -1058,8 +1096,8 @@ section{
     display:block;
     position:absolute;
     top:-10px;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
     border-bottom: 13px solid #fff;
@@ -1075,7 +1113,7 @@ section{
 }
 .image-mapper .marker .marker-details{
    margin-top:42px;
-   display: none;    
+   display: none;
    background: #fff;
    padding:10px;
    color:black;
@@ -1090,7 +1128,7 @@ section{
 }
 #placeholderImg{width:100%;}
 .image-mapper .marker:hover .marker-details{
-   opacity:1;  
+   opacity:1;
    display:block;
 }
 .image-mapper .marker .marker-details .marker-img{
@@ -1164,7 +1202,7 @@ section{
 	margin: 0;
     }
     .pad-small{padding:0 20px;}
-    
+
 }
 @media screen and (max-width:480px){
     .fancybox-slide--video .fancybox-content{

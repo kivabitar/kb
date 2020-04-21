@@ -58,10 +58,12 @@ class Blog extends React.Component{
 
   render() {
     return(
-      <div>
-        {this.renderPage()}
-        {this.state.loading}
-      </div>
+      <section className="fullwidth">
+        <div className="row">
+          {this.renderPage()}
+          {this.state.loading}
+        </div>
+      </section>
     )
   }
 }

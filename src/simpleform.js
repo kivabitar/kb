@@ -1,10 +1,12 @@
-import React from "react"
+import React from "react";
+import HTML2React from 'html2react';
 import Loading from './loading';
 import Text from './fields/text.js';
 import Textarea from './fields/textarea.js';
 import Hidden from './fields/hidden.js';
 import Select from './fields/select.js';
 import Checkbox from './fields/checkbox.js';
+import fdata from './data/form.json';
 
 class Form extends React.Component{
   constructor(props){
@@ -37,51 +39,43 @@ class Form extends React.Component{
     //console.log(this.props.form)
     let url = '';
     if(this.props.form !== ''){
-       url = `https://staging.matthewsmarking.com/wp-json/r/form/?id=${this.props.form}`;
+       //url = `https://staging.matthewsmarking.com/wp-json/r/form/?id=${this.props.form}`;
        this.setState({form:this.props.form})
-    }else{
-       url = `https://staging.matthewsmarking.com/wp-json/r/form/?id=${this.state.form}`;
     }
 
-  //  console.log(url);
-    fetch(url)
-      .then(response => response.json())
-      .then(myJSON => {
-        this.setState({loading:''});
-        //  console.log(myJSON);
-        let pageStuff = [];
+    //  console.log(url);
+    let pageStuff = [];
 
-          pageStuff.push(<input type="hidden" value={myJSON.id} name="formId" id='formId' key="99999" />);
+    let formstuff = Array.from(fdata.fields);
+    let i = 0;
+    console.log(formstuff);
+    formstuff.map(a=>{
+      if(a.type == 'text' || a.type == 'email'){
+        console.log("this fired")
+        pageStuff.push(<Text {...a} key={i} />)
+        i++;
+      }
+      if(a.type == 'textarea'){
+        pageStuff.push(<Textarea {...a} key={i} />)
+        i++;
+      }
+      if(a.type == 'hidden'){
+        pageStuff.push(<Hidden {...a} key={i} />)
+        i++;
+      }
+      if(a.type == 'select'){
 
-          let i = 0;
-          myJSON.fields.map(a=>{
-            if(a.type == 'text' || a.type == 'email'){
-              pageStuff.push(<Text {...a} key={i} />)
-              i++;
-            }
-            if(a.type == 'textarea'){
-              pageStuff.push(<Textarea {...a} key={i} />)
-              i++;
-            }
-            if(a.type == 'hidden'){
-              pageStuff.push(<Hidden {...a} key={i} />)
-              i++;
-            }
-            if(a.type == 'select'){
-
-              pageStuff.push(<Select {...a} key={i} condition={a.conditionalLogic} />)
-              i++;
-            }
-            if(a.type == 'checkbox'){
-              pageStuff.push(<Checkbox {...a} key={i} />)
-              i++;
-            }
-          //  console.log(a)
-          });
-
-
-        this.setState({pageStuff :pageStuff});
-      });
+        pageStuff.push(<Select {...a} key={i} condition={a.conditionalLogic} />)
+        i++;
+      }
+      if(a.type == 'checkbox'){
+        pageStuff.push(<Checkbox {...a} key={i} />)
+        i++;
+      }
+    //  console.log(a)
+    });
+    this.setState({loading: '' });
+    this.setState({pageStuff :pageStuff});
   }
   renderPage(){
     if (this.state.pageStuff) {
@@ -201,18 +195,25 @@ class Form extends React.Component{
       border:'none'
     }
     return(
-
-          <div className="gform_wrapper">
+      <section className="full-width-content">
+          <div className="row">
+          <div className="col-md-6">
+            {HTML2React(this.props.content)}
+          </div>
+          <div className="col-md-2" />
+          <div className="col-md-4">
             <div id="errortexthere"></div>
+            <h2>Contact me</h2>
             <form  id="gf" onSubmit={this.handleClick} onChange={this.handleChange} >
               <ul id={"gform_field_" + this.state.form} className="gform_fields description_below top_label">
-              {this.renderPage()}
+                {this.renderPage()}
                 <li><button className="orange button" style={buttonStyle}>submit</button></li>
               </ul>
             </form>
             {this.state.loading}
           </div>
-
+          </div>
+        </section>
     )
   }
 }

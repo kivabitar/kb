@@ -8,7 +8,7 @@ const Head = (props,state) => {
   return(
     <>
       <MetaTags>
-        <link rel="icon" id="favicon" href={(props.favicon ? props.favicon : 'favicon.png')} />
+        <link rel="icon" id="favicon" href={(props.favicon ? props.favicon : '/kb.png')} />
 
         <title>{props.title ? HTML2React(props.title) : "kivab.com"}{slug ? '|' + slug : ""}</title>
         <meta id="meta-description" name="description" content={props.description ? props.description : "Web Developer with over 20 years experience"} />

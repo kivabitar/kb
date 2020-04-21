@@ -40,12 +40,12 @@ class Text extends React.Component{
               <React.Fragment>
                 <input
                   id={`input_${this.state.props.formId}_${this.state.props.id}`}
-                  name={this.state.props.customName || `input_${this.state.props.id}`}
+                  name={this.state.props.label}
                   type={this.state.props.type}
                   value={this.state.props.value ? this.state.props.value : this.state.value}
                   placeholder={this.state.props.placeholder}
                   maxLength={this.state.props.maxLength}
-                  required={this.state.props.isRequired}
+                  required="true"
                   onChange={(event) => {
                     this.updateForm(event, this.state.props.field);
                   }}

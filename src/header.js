@@ -18,7 +18,7 @@ const Header = ({ state }) => {
             <img src="https://wp.kivab.com/wp-content/themes/kivab/library/images/mobile.png" />
           </a>
           <div className="m-nav">
-
+            <Nav />
           </div>
         </nav>
 

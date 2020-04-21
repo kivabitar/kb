@@ -47,6 +47,14 @@ class App extends React.Component {
                 <Head title="Welcome to Kiva Bostrom's personal website | Web Dev and System Architect" />
                 <Home />
               </Route>
+              <Route exact path = '/blog'>
+                <Head title="Welcome to Kiva Bostrom's personal website | Web Dev and System Architect" />
+                <Blog />
+              </Route>
+              <Route path = '/blog/:slug'>
+                <Head title="Kiva Blog" favicon='/kb.png'  />
+                <Blogentry />
+              </Route>
             </Switch>
           </BrowserRouter>
           </div>
