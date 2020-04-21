@@ -30,7 +30,7 @@ class Normalpage extends React.Component{
     }
   }
   fetchPostData(props) {
-    fetch(`https://staging.matthewsmarking.com/wp-json/wp/v2/pages?slug=` + this.state.slug)
+    fetch(`https://wp.kivab.com/wp-json/wp/v2/pages?slug=` + this.state.slug)
       .then(response => response.json())
       .then(myJSON => {
 

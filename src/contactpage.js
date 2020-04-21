@@ -32,7 +32,7 @@ class Contact extends React.Component{
     }
   }
   fetchPostData() {
-    fetch(`https://staging.matthewsmarking.com/wp-json/wp/v2/pages?slug=contact-us`)
+    fetch(`https://wp.kivab.com/wp-json/wp/v2/pages?slug=contact-us`)
       .then(response => response.json())
       .then(myJSON => {
         this.setState({loading:''});
@@ -106,33 +106,13 @@ class Contact extends React.Component{
     }
   }
   render(){
-    let bgover = '';
-    let marginBottom = {
-      margin: '0 auto 8px'
-    }
-    //console.log(this.props);
-    if(this.props.background_image_override ==='' || !this.props.background_image_override){
-      const imgs = [
-          'https://matthewsmarking.com/app/themes/matthewsmarking/library/images/contact_us_back_of_head_lady.jpg',
-          'https://matthewsmarking.com/app/themes/matthewsmarking/library/images/contact_us_smiling_guy.jpg',
-          'https://matthewsmarking.com/app/themes/matthewsmarking/library/images/contact_us_smiling_lady.jpg'
-      ];
-      let number = Math.floor(Math.random() * imgs.length);
-      bgover = imgs[number];
-    }
-    else{
-      bgover = this.props.background_image_override;
-    }
-    const divstyles = {
-      backgroundImage:'url(' + bgover + ')'
-    }
     return(
       <div className="contact">
         {this.state.hero}
         <div className="form-interrupt">
             <div className="inner-content">
                 <div className="form">
-                      <select id="reason" value="default" onChange={this.handleFormChange} style={marginBottom}>
+                      <select id="reason" value="default" onChange={this.handleFormChange}>
                           <option value="default" disabled="" className="hider">Select Reason for Contact*</option>
                           <option value="productsales">Product / Sales Inquiry</option>
                           <option value="tech">Technical Support</option>

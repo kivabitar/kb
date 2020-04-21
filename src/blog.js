@@ -26,7 +26,7 @@ class Blog extends React.Component{
     }
   }
   fetchPostData() {
-    fetch(`https://staging.matthewsmarking.com/wp-json/wp/v2/posts`)
+    fetch(`https://wp.kivab.com/wp-json/wp/v2/posts`)
       .then(response => response.json())
       .then(myJSON => {
 

@@ -30,7 +30,7 @@ class Solutions extends React.Component{
     }
   }
   fetchPostData() {
-    let url=`https://staging.matthewsmarking.com/wp-json/wp/v2/pages?slug=${this.state.slug}`
+    let url=`https://wp.kivab.com/wp-json/wp/v2/pages?slug=${this.state.slug}`
     fetch(url)
       .then(response => response.json())
       .then(myJSON => {
