@@ -1,0 +1,133 @@
+.footer-cta{
+    h2{
+        font-size:1.2em;
+    }
+    input[type=email]{
+        padding:6px 10px;
+        border-radius: $base-border-radius;
+        border:none;
+        max-width:260px;
+        margin-right:10px;
+    }
+    input[type=submit]{
+        background-color:$primary;
+        border-radius: $base-border-radius;
+        border:none;
+        padding:6px 10px;
+        color:white;
+    }
+    h5{
+        margin-bottom: 0;
+    }
+    ul{
+        margin-top:0;
+        list-style-type: none !important;
+        li{
+            font-size:.9em;
+            margin:0;
+            padding:4px 0 0 6px;
+            line-height:1.2em;
+            a{
+                text-decoration:none;
+            }
+        }
+    }
+    @include bp-small{
+        .col-6{
+            text-align:center;
+            margin:20px auto;
+        }
+    }
+    @include bp-large{
+        .col-6{
+            text-align:left;
+            margin:0px auto;
+        }
+    }
+}
+.footer{
+        
+	margin: 0px 0 0;
+	padding-bottom: 30px;
+	width:100%;
+	display:block;
+	background-color: $secondary;
+	overflow:visible;
+	color:$footer-gray !important;
+	float:left;
+	clear:both;
+	text-align: center;
+	@include bp-large {
+		text-align: center;
+	}
+	.foot-wrap{
+		margin:0 auto !important;
+		display:block;
+                color: $white;
+                text-transform: none;
+		@include outer-container;
+                font-size:.9em;
+	}
+	p {
+	  font-size: 15px;
+	  color: $white;
+	 }
+	
+         .col-6{
+             padding:12px 0;
+         }
+         @include bp-small {
+             .align-left,.align-right{
+                 text-align: center;
+             }
+		
+	}
+         @include bp-large {
+             .align-left{
+                 text-align: left;
+             }
+            .align-right{
+                 text-align: right;
+             }
+	}
+        &:before,&:after{
+            display:table;
+            content:'';
+        }
+    a{
+        color:$white;
+    }
+    .social{
+        max-width:200px;
+        display:block;
+        clear:both;
+        a{
+            margin-right:30px;
+            &:last-of-type{
+                margin-right:0;
+            }
+        }
+    }
+    .copy{
+        clear:both;
+        display:block;
+    }
+    .callus{
+        text-transform: none;
+        line-height:1.8em;
+        a{
+            text-decoration:none;
+            background-color: $primary;
+            border-radius:$base-border-radius;
+            padding:4px 10px;
+        }
+    }
+    .decoder{
+        font-size:.8em;
+        margin-top:20px;
+        a{
+            text-decoration: none;
+            color:$subtle-gray;
+        }
+    }
+}

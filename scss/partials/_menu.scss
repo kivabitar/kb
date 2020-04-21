@@ -1,0 +1,220 @@
+.main-navigation {
+	display:inline-block;
+	z-index:1;
+	width:auto;
+	float: right;
+	text-align:center;
+	color:$black;
+	z-index:5000 !important;
+	#mobile-nav {
+		position:absolute;
+		top:18px;
+		right:10px;
+		img {
+			max-width: 30px;
+		}
+		@include bp-small {
+			display: inline-block;
+		}
+		@include bp-xlarge {
+			display: none !important;
+		}
+		@include bp-xxlarge {
+			//display: none !important;
+		}
+	}
+	.m-nav {
+		display:inline-block;
+		text-align:right;
+		float: right;
+		z-index:5000 !important;
+		#menu-main-menu {
+			position:absolute;
+			width:100%;
+			display:none;
+			margin: 0 !important;
+			top:55px;
+			left:0px;
+			list-style-type:none !important;
+			background:$white;
+			text-align:left;
+			z-index:5000 !important;
+			.sub-menu {
+				@include bp-small{
+				   margin:0; 
+				}
+				@include bp-large{
+					margin:16px 10px;
+					position:absolute;
+					display:none;
+					padding:20px;
+				}
+				list-style-type:none !important;
+				top:10px;
+				left:0;
+				z-index:5000 !important;
+				@include animation(
+					fade-in
+					ease
+					500ms 
+					forwards
+				);
+				li {
+					@include bp-large{
+						padding: 8px 10px !important;
+					}
+					display:block !important;
+					
+					width:100% !important;
+					float:none !important;
+					background-color:$primary !important;
+					color:$white !important;
+					min-width:200px;
+					text-align:left;
+					a{
+						color:$white !important;
+					}
+					&:hover {
+						a {
+							color: $secondary !important;
+						}
+					}
+				}
+				.current-menu-item, .current-post-ancestor {
+					@include bp-small{
+						background:$secondary !important;
+					}
+					a {
+						color: $white !important;
+						border-bottom:2px solid $primary;
+						&:hover{
+							color: $white !important;
+						}
+					}
+					&:hover{
+						background:$primary;
+					}
+				}
+			}
+			li {
+				float:left;
+				width:100%;
+				height:100%;
+				padding:20px 10px;
+				position:relative;
+				a {
+					@include bp-small{
+						color:$white;
+					}
+					@include bp-large{
+						color:$secondary;
+					}
+					font-size: $small-text;
+					font-weight:400;
+					white-space: nowrap;
+					text-decoration:none;
+					&:hover {
+						color: $primary;
+					}
+				}
+				&:hover {
+					color: $primary;
+					.sub-menu {
+						display:block;
+					}
+				}			
+			}
+			&:last-of-type{
+				margin-right:40px;
+			}
+			#menu-item-49{
+				@include bp-small{
+					padding-bottom:0;
+				}
+				@include bp-large{
+					padding-bottom:10px;
+				}
+			}
+			@include bp-small{
+				left:0;
+				li {
+					width:100%;
+					text-align:left;
+					background:$primary;
+					padding:10px 12px;
+				}
+				.current-menu-item, .current-post-ancestor {
+				background:$secondary;
+				a {
+					color: $white !important;
+					border-bottom:2px solid $primary;
+					padding-bottom: 8px;
+				}
+			}
+		}
+		@include bp-medium{
+		}
+		@include bp-large{
+			.current-menu-item, .current-post-ancestor {
+				background:none;
+			}
+		}
+		@include bp-xlarge{
+			display: inline-block;
+			margin-right:$gutter;
+			position:static;
+			background:none;
+			height: 50px;
+			min-width: 700px;
+			float: left;
+			li {
+                                
+				padding: 18px 1% 4px;
+				background:none;
+				width:auto;
+				float:left;
+				display:inline;
+				text-align:right;
+			}
+			.current-menu-item, .current-post-ancestor {
+				a {
+					color: #000 !important;
+					border-bottom:2px solid $primary;
+				}
+			}
+		}
+		@include bp-xxlarge{
+			display:block;
+			margin-right:$gutter*2;
+			min-width:800px;
+			width:100%;
+			li {
+				padding: 18px 1.8% 6px;
+			}
+		}
+	}
+	@include bp-small{
+	}
+	@include bp-xlarge{
+		float: right;
+	}
+	@include bp-xxlarge{
+	}
+}
+	@include bp-small{
+		position:absolute;
+		top:10px;
+		left:0;
+		width:100%;
+	}
+	@include bp-large{
+		position:relative;
+		overflow:visible;
+		max-width:60%;
+	}
+        @include bp-xxlarge{
+		position:relative;
+		overflow:visible;
+		max-width:70%;
+	}
+}

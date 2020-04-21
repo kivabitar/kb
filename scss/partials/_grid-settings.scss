@@ -1,0 +1,165 @@
+// Neat Overrides
+@mixin bp-xxlarge {
+  @media only screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+// 1120px
+@mixin bp-xlarge {
+  @media only screen and (min-width: 1120px) {
+    @content;
+  }
+}
+
+// 960px
+@mixin bp-large {
+  @media only screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+// 640px
+@mixin bp-medium {
+  @media only screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+
+//1px @font-size 16px
+@mixin bp-small {
+  @media only screen and (min-width: 1px) {
+    @content;
+  }
+}
+
+$grid-columns: 12;
+
+.col-1 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(1)
+	}
+}
+.col-2 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(2)
+	}
+}
+.col-3 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(3)
+	}
+}
+.col-4 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(4)
+	}
+}
+.col-5 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(5)
+	}
+}
+.col-6 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(6)
+	}
+}
+.col-7 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(7)
+	}
+}
+.col-8 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(8)
+	}
+}
+.col-9 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(9)
+	}
+}
+.col-10 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(10)
+	}
+}
+.col-11 {
+	@include bp-small{
+		@include span-columns(12)
+	}
+	@include bp-large{
+		@include span-columns(11)
+	}
+}
+.col-12 {
+	@include span-columns(12)
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	&:last-child {
+		margin-right:0 !important;
+		@include omega;
+	}
+}
+// Responsive Breakpoints
+// ------------------------------------------------------
+
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+$max-width:                  $screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

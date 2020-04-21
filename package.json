@@ -1,0 +1,53 @@
+{
+  "name": "matthewsmarking",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "express": "^4.17.1",
+    "html-to-react": "^1.4.2",
+    "html2react": "^1.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-gravity-form": "0.0.78",
+    "react-meta-tags": "^0.7.4",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "envify": "^4.1.0",
+    "terser": "^4.6.3",
+    "uglifyify": "^5.0.2"
+  },
+  "author": "Kiva Bostrom",
+  "license": "ISC",
+  "homepage": "http://js.matthewsmarking.com"
+}

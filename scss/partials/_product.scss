@@ -1,0 +1,71 @@
+.product{
+    .highlight-three{
+        min-height: 400px;
+        @extend .white;
+        @extend .bottom-nub;
+    }
+    .prod-col-grid{
+        @include block();
+        padding-top: 100px;
+        background: $lightgray-fade;
+        
+        .row{
+            margin: 0px auto 20px;
+            padding: 30px 0;
+        }
+        h3{
+            margin-top: 0px;
+            color: $secondary-gray;
+            font-weight: 900;
+            font-size:1.4em;
+        }
+        .prod-tit{
+            @include bp-small{
+                padding:10px;
+            }
+            @include bp-medium{
+                padding:0;
+            }
+        }
+        .prod-col{
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+            padding:0px;
+            img{
+                margin-top:0px;
+            }
+            
+        }
+        .short-dash{
+            background-color: $secondary-blue;
+        }
+        .bullets{
+            @include bp-small{
+                padding:10px;
+            }
+            @include bp-medium{
+                padding:0;
+            }
+            ul{
+                list-style-type: disc;
+                list-style-position: outside;
+                margin-left:$gutter;
+            }
+        }
+        .nm{
+            margin-left:0px !important;
+            @include bp-small{
+                padding:10px;
+            }
+            @include bp-medium{
+                padding:0;
+            }
+        }
+    }
+    .resource-tile-grid{
+        @include bg();
+        background-image: url(/app/themes/matthewsmarking/library/images/prod-res.jpg);
+    }
+    
+}

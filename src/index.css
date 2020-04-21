@@ -1,0 +1,13 @@
+.highlight-three .top-text ul, .bottom-nub .top-text ul {
+    max-width: 350px;
+    list-style-type: none;
+    list-style-position: inside;
+    margin-left: 0px;
+}
+.highlight-three .top-text ul li, .bottom-nub .top-text ul li {
+    background: url(https://matthewsmarking.com/app/themes/matthewsmarking/library/images/plus-tiny.png) no-repeat left 6px;
+    padding: 0 0 0px 22px;
+    vertical-align: middle;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}

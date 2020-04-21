@@ -1,0 +1,95 @@
+.header{
+	margin:0;
+	padding:0;
+	display:block;
+	width:100%;
+	float:left;
+	height:auto;
+	z-index:100;
+	background:$white;
+	min-height:66px;
+        @include bp-large{
+            height:98px !Important;
+            overflow:visible;
+        }
+}
+.head-wrap {
+        @include outer-container;
+        max-with:$max-width;
+	position:relative;
+	margin:0;
+	width:100%;
+	display:block;
+	background-color: transparent;
+	overflow:visible;
+        padding: 0;
+        margin: 0 auto;
+        z-index:500;
+	#logo {
+		display:block;
+		float:left;
+		clear:both;
+		padding:0;
+		margin:0;
+		width:auto;
+		text-align:left;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+	}
+        .phone-main{
+            color:$primary;
+            position:absolute;
+            top:0;
+            right:0;
+            a{
+                text-decoration:none;
+            }
+            @include bp-small{
+                font-size:.7em;
+                right:10px;
+            }
+            @include bp-large{
+                font-size:1em;
+                right:9%;
+                margin-right:4px;
+                top:20px;
+            }
+            @include bp-xlarge{
+                
+            }
+        }
+	@include bp-small{
+		#logo{
+                        margin:20px 0 0 20px;
+			max-width:180px;
+		}
+	}
+	@include bp-medium{
+		#logo{
+			//max-width:200px;
+		}
+	}
+	@include bp-large{
+		padding: 0 10px;
+		#logo{
+                   
+			//max-width:260px;
+		}
+	}
+	@include bp-xlarge{
+            padding: 10px 20px;
+		#logo{
+                        margin:0;
+			max-width:180px;
+		}
+	}
+	@include bp-xxlarge{
+            padding: 10px 20px;
+		#logo{
+			//max-width:350px;
+		}
+	}
+}

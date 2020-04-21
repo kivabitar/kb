@@ -1,0 +1,65 @@
+.page-template-results{
+    .ss{
+        .row{
+            max-width:950px;
+        }
+        .ss-img{
+            width:100%;
+            border-radius: 50%;
+            overflow: hidden;
+            max-width:250px;
+            background-size: cover;
+            background-repeat:no-repeat;
+            display:inline-block;
+            border:3px solid $secondary;
+        }
+        
+        .ss-title{
+            text-transform: uppercase;
+            font-size:1.2em;
+            margin-top:0px;
+        }
+        .ss-author{
+            text-align: right;
+            font-size:1.1em;
+        }
+    }
+    .secondary-row{
+        .ss-img{
+            border:3px solid $subtle-gray !important;
+        }
+    }
+    .test-learn-more {
+    	font-weight: bold;
+    	list-style-image: none;
+        text-decoration: none;
+    	color: $primary;
+    	&:after {
+        	content: url('/wp-content/themes/decoder/library/images/bullet.png');
+    	}
+    }
+    .charts {
+    	@include bp-large {
+    		.col-6 {
+    			width: 48%;
+    			margin-right: 4%;
+    			&:last-of-type {
+    				margin-right: 0;
+    			}
+    		}
+    	}
+    	.results-chart {
+    		margin: 16px 0 70px;
+    	}
+    	ul.arrows {
+            @include bp-small{
+                margin: 70px 0 70px 16px;
+            }
+            @include bp-large{
+                margin: 70px 0 0;
+            }
+            
+                
+    	}
+    }
+}

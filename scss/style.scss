@@ -1,0 +1,57 @@
+/******************************************************************
+Theme Name: Decoder
+Theme URI: http://www.decoderdigital.com
+Description: This site was built using the Bones Development Theme. For more information about Bones or to view documentation, you can visit the <a href="https://github.com/eddiemachado/bones/issues" title="Bones Issues">Bones Issues</a> page on Github. You'll want to customize this for your clients with your own information.
+Author: Kiva Bitar
+Author URI: http://www.decoderdigital.com
+Version: 1.7
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
+
+License: WTFPL
+License URI: http://sam.zoy.org/wtfpl/
+Are You Serious? Yes.
+
+/******************************************************************
+Site Name: Dragonfly VRV
+Author: Kiva Bitar Decoder Digital
+
+Stylesheet: Main Stylesheet
+******************************************************************/
+
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+//bourbon neat
+@import "partials/bourbon/bourbon";
+@import "partials/neat/neat";
+
+// import mixins
+@import "partials/mixins";
+@import "partials/bootmix";
+// grid
+@import "partials/grid-settings";
+@import "partials/bootstrapcheat";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+//header and footer
+@import "partials/header";
+@import "partials/footer";
+
+@import "partials/menu";
+
+//global
+@import "partials/global";
+
+//pages
+@import "partials/home";
+@import "partials/blog";
+@import "partials/blankpage";

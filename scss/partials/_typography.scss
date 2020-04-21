@@ -1,0 +1,81 @@
+/********************
+
+Typography
+
+
+*******************/
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+// font stacks
+$sans-serif: 'Roboto', 'Open Sans', "Helvetica Neue", sans-serif;
+$serif: "Georgia", Cambria, Times New Roman, Times, serif;
+$montserrat: 'Montserrat', sans-serif;
+$opensans: 'Open Sans', sans-serif;
+
+p {
+    font-weight: 100;
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+   -webkit-hyphenate-after: 3;
+           hyphenate-lines: 3;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig";
+   -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+          color:$primary;
+}
+h1, h2, h3, h4, h5 {
+    font-family: $sans-serif;
+    font-weight: 400;
+    line-height: 1.3em;
+    color:$yellow;
+	.bold {
+		font-weight: 700;
+	}
+}
+h1 {
+    font-size: 2.3em;
+}
+h2 {
+	font-size: 1.86em;
+}
+h3 {
+	font-size: 1.333em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.0em;
+	font-weight: 700;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.small-text {
+	font-size: $small-text;
+	line-height: 1.7em;
+}
+.large-text {
+	font-size: $large-text;
+}
+.superbold{
+	font-weight: 900;
+}
+a {
+	color: $primary;
+//	@include transition(all 500ms ease);
+	&:hover {
+		color: $secondary;
+	}
+}

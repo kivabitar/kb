@@ -1,0 +1,51 @@
+/******************************************************************
+Variables set here!
+
+******************************************************************/
+
+/*********************
+COLORS
+*********************/
+
+//$primary: #1c252c;
+$primary: #29526D;
+$secondary: #5F859D;
+$yellow: #ff3c00;
+
+$alert-yellow: #ebe16f;
+$alert-red: #fbe3e4;
+$alert-green: #e6efc2;
+$alert-blue: #d5edf8;
+
+$black: #08283C;
+$white: #fff;
+
+$background-color: #ffffff;
+
+$light-gray: #f8f9fa;
+$gray: #7c878d;
+$text-color: #fff;
+$meta-gray: #9fa6b4;
+$footer-gray:  #747F83;
+
+$subtle-gray: #eaeaea;
+$tan: #eceee5;
+$green: #00b287;
+
+$bones-pink: #f01d4f;
+$blue: #2980b9;
+
+$link-color: $bones-pink;
+$link-hover: darken($link-color, 9%);
+
+$border-color: #ccc;
+$base-border-radius: 5px;
+$disabled-gray: #cfcfcf;
+
+$pageWidth: 95rem;
+$max-width: 95rem;
+
+$image-path: '/wp-content/themes/decoder/library/images' !default;
+
+$small-text: .8889em;
+$large-text: 1.16667em;

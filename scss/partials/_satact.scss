@@ -1,0 +1,42 @@
+.page-template-act, .page-template-sat {
+    
+    .class-types{
+        .ct-sidebar{
+            background-color:$white;
+        }
+        h2{
+            margin-top:0;
+        }
+        
+    }
+    .tuition-pg{
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .class-notes{
+        font-weight:bold;
+    }
+    .additional-package{
+        max-width:700px;
+        margin:auto;
+        text-align: center;
+        display: block;
+        .class-desc{
+            text-align: left;
+        }
+    }
+    .most-popular{
+            width:70px;
+            height:123px;
+            background-image:url(/wp-content/themes/decoder/library/images/most-popular.png);
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+            display:inline-block;
+            clear:none;
+            margin-right:10px;
+    }
+    .mp{
+        display: inline-block;
+    }
+}
