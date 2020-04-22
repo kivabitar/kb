@@ -45,37 +45,31 @@ class Home extends React.Component{
       //  console.log(a);
         pageStuff.push(<Hero {...a} key={i} />);
         i++
-
       }
       if(a.acf_fc_layout === '2_panel_w_grid'){
       //  console.log(a);
         pageStuff.push(<SplitPanel {...a} key={i} />);
         i++
-
       }
       if(a.acf_fc_layout === 'highlights_and_events'){
       //  console.log(a);
         pageStuff.push(<News {...a} key={i} />);
         i++
-
       }
       if(a.acf_fc_layout === 'testimonials_grid'){
       //  console.log(a);
         pageStuff.push(<Testimonial {...a} key={i} />);
         i++
-
       }
       if(a.acf_fc_layout === 'half'){
       //  console.log(a);
         pageStuff.push(<Fiftyfifty {...a} key={i} />);
         i++
-
       }
       if(a.acf_fc_layout === 'normal_content'){
       //  console.log(a);
         pageStuff.push(<Form {...a} key={i} />);
         i++
-
       }
     });
 

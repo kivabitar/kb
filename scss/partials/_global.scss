@@ -10,6 +10,7 @@ body{
     font: 17px/1.8em $opensans;
     color: $primary;
     background-color: $background-color;
+
 }
 img{
 	max-width: 100%;
@@ -20,6 +21,7 @@ img{
 	max-width: 100%;
 	padding: 0 !important;
 	opacity: 0;
+
 	@include animation(
 		fade-in
 		ease
@@ -260,7 +262,14 @@ section{
         display:table;
     }
 }
-
+.excerpt-read-more{
+	display:none;
+}
+.fullwidth{
+	padding-top:56px;
+	background-image:url(http://localhost:3000/kb.jpg) !important;
+	background-repeat:no-repeat;
+}
 .newletter-cta{
 	padding: 0 0 10px;
 	h2 {
@@ -882,6 +891,10 @@ section{
      max-width: 100%;
      display:block;
      margin:0 auto 0;
+}
+.full-width-container{
+	position:relative;
+	z-index: 300;
 }
 
 .full-width-bg{
