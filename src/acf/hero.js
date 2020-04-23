@@ -5,57 +5,26 @@ import HTML2React from 'html2react'
 function Hero(props){
 //const Html2React = libraries.html2react.Component;
 
-  //console.log(props)
 
+  const styles = {
+    position:'static',
+    zIndex:5,
+  };
+  const divstyle = {backgroundImage:'url(' + props.background_image + ')'};
   // Load the post, but only if the data is ready.
-//  console.log(props.height);
-const hstyle = {
-  minHeight: 460
-}
-const flex = {
-  display: "flex",
-  alignContent :'center',
-  minHeight: 460
-}
-console.log(hstyle)
-const styles = {
-  backgroundImage:"url("+ props.manual_slider[0].slide_image + ')',
-  minHeight: 460,
-  backgroundRepeat: 'no-repeat',
-  backgroundSize:'cover',
-  backgroundPosition: "center 50%"
-}
-const centerstyles = {
-  margin:'auto'
-}
+//  console.log(props);
   return (
-    <section  style={hstyle}>
-                <div id="mslider" className="m-slider">
-                    <div className="slick" style={hstyle}>
-                        <div style={styles}>
-                            <div className="container-wrap">
-                                <div className="container" style={flex}>
-                                    <div className="slide-cont bg" style={centerstyles}>
-
-                                            <h1>{props.manual_slider[0].slide_title}</h1>
-
-
-                                        <div className="smain-content">
-
-                                            <div className="text-center">
-                                            {HTML2React(props.manual_slider[0].slide_content)}
-                                                {props.manual_slider[0].cta_link ? <a href={props.manual_slider[0].cta_link} className="newbutton"  >{props.manual_slider[0].cta_label}</a> : false }
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-
-        </section>
+    <div  className="hero" style={divstyle} >
+      {(props.image_or_video_background === "Video" ? <Herovid hero_video={props.hero_video} />  : null)}
+      <div className="dark-overlay"> </div>
+      <div className="texture"></div>
+      <div className="inner-content" style={styles}>
+        <h1 >{ HTML2React(props.hero_title) }</h1>
+        <div className="short-dash"> </div>
+        <div className="detail"  >{HTML2React(props.hero_details)}</div>
+        {props.hero_link ? <a href={props.hero_link} className="orange button">{props.hero_linktext}</a> : ''}
+      </div>
+    </div>
   );
 };
 

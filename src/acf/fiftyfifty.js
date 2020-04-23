@@ -1,5 +1,6 @@
 import React from "react";
 import HTML2React from 'html2react'
+import Form from '../simpleform.js';
 
 function Fiftyfifty(props){
 //const Html2React = libraries.html2react.Component;

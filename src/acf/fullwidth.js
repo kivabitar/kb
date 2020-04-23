@@ -5,8 +5,8 @@ function Fullwidth(props){
 //const Html2React = libraries.html2react.Component;
 
   return (
-    <div  className="full-width-content" >
-      <div className="inner-content">
+    <div  className="fullwidth" >
+      <div className="row">
 
         {HTML2React(props.content)}
 

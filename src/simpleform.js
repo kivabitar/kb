@@ -189,19 +189,15 @@ class Form extends React.Component{
   }
   render() {
     const divstyle = {
-      marginTop: "30px"
+      margin: "30px"
     }
     const buttonStyle = {
       border:'none'
     }
     return(
-      <section className="full-width-content">
-          <div className="row">
-          <div className="col-md-6">
-            {HTML2React(this.props.content)}
-          </div>
-          <div className="col-md-2" />
-          <div className="col-md-4">
+      <section className="inner-content">
+          <div className="inner-content" style={divstyle}>
+
             <div id="errortexthere"></div>
             <h2>Contact me</h2>
             <form  id="gf" onSubmit={this.handleClick} onChange={this.handleChange} >
@@ -211,7 +207,7 @@ class Form extends React.Component{
               </ul>
             </form>
             {this.state.loading}
-          </div>
+
           </div>
         </section>
     )

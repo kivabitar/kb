@@ -5,8 +5,11 @@ import Loading from './loading';
 import News from './acf/news.js';
 import Testimonial from './acf/testimonial.js';
 import SplitPanel from './acf/splitpanel.js';
+import Fullwidth from './acf/fullwidth.js';
 import Form from './simpleform.js';
+import Formsplit from './acf/formsplit.js';
 import Fiftyfifty from './acf/fiftyfifty.js'
+import FeedPage from './feedpage.js';
 import sdata from './data/home.json';
 
 class Home extends React.Component{
@@ -38,10 +41,10 @@ class Home extends React.Component{
     let pageStuff = [];
     let i=0;
 
-    let acf = obj.acf.content_row;
+    let acf = obj.acf.content_rows;
     acf.map(function(a){
       //console.log(a);
-      if(a.acf_fc_layout === 'slider'){
+      if(a.acf_fc_layout === 'hero'){
       //  console.log(a);
         pageStuff.push(<Hero {...a} key={i} />);
         i++
@@ -68,11 +71,19 @@ class Home extends React.Component{
       }
       if(a.acf_fc_layout === 'normal_content'){
       //  console.log(a);
-        pageStuff.push(<Form {...a} key={i} />);
+        pageStuff.push(<Fullwidth {...a} key={i} />);
         i++
       }
+      if(a.acf_fc_layout === 'full_width_background_image_section'){
+      //  console.log(a);
+        pageStuff.push(<Fullwidth {...a} key={i} />);
+        i++
+      }
+      if(a.acf_fc_layout  === '50-50_imageform'){
+        pageStuff.push(<Formsplit {...a} key={i} />);
+      }
     });
-
+    pageStuff.push(<FeedPage key="000111111" />);
     return pageStuff;
   }
   fetchPostData() {
@@ -111,8 +122,8 @@ class Home extends React.Component{
     if(form){form.onSubmit = this.handleSubmit();}
     return(
       <div className="home " style={styles}>
-        {this.renderPage()}
 
+        {this.renderPage()}
       </div>
     )
   }

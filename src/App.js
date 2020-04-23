@@ -11,7 +11,9 @@ import Blog from './blog.js';
 import Blogentry from './blogentry.js';
 import Normalpage from './normalpage.js';
 import './App.css';
-
+import FeedPage from './feedpage.js';
+import { createBrowserHistory as createHistory } from "history";
+const history = createHistory();
 
 const InitialState = {
   pageStuff: {"blue":true}
@@ -55,6 +57,11 @@ class App extends React.Component {
                 <Head title="Kiva Blog" favicon='/kb.png'  />
                 <Blogentry />
               </Route>
+              <Route
+                path="/feed"
+                exact
+                component={props => <FeedPage {...props} />}
+              />
             </Switch>
           </BrowserRouter>
           </div>
