@@ -105,17 +105,17 @@
 				position:relative;
 				a {
 					@include bp-small{
-						color:$white;
+						color:$yellow;
 					}
 					@include bp-large{
-						color:$secondary;
+						color:$yellow;
 					}
 					font-size: $small-text;
 					font-weight:400;
 					white-space: nowrap;
 					text-decoration:none;
 					&:hover {
-						color: $primary;
+						color: $yellow;
 					}
 				}
 				&:hover {

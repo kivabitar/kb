@@ -183,39 +183,6 @@ section{
 
 }
 /* HERO */
-.hero {
-    background-color: $secondary;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto  0px !important;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    @include bp-medium {
-        width: 100%;
-    }
-    @include bp-large {
-        //min-height: 580px;
-    }
-}
-.hero, .home-slider {
-    .hero-white {
-    	max-width: 830px;
-    	margin: 20px auto 20px;
-    	padding: 40px;
-            background-color: rgba(255,255,255,.6);
-            color: $primary;
-            h1 {
-                margin: 0 0 .9em;
-            }
-            p {
-                font-size: 1.1em;
-                line-height: 1.4;
-            }
-	}
-}
 .half{
 	width:100%;
 	padding:0;
@@ -275,6 +242,13 @@ section{
 	.full-width-container{
 	//	margin-left:10px;
 	width:100%;
+	h3 a{
+		color: $yellow;
+		@include transition(all,.5s);
+		&:hover{
+			color: #fff;
+		}
+	}
 	&:before{
 		display:table;
 		content:'';
@@ -391,6 +365,7 @@ section{
     }
     h1{
         margin-top:0px;
+				color:$yellow;
         @include bp-small{
             flex-wrap:wrap;
             font-size:2.1em;
@@ -419,7 +394,6 @@ section{
             }
         }
         font-weight: 700;
-        color:#fff !important;
         display:flex;
         align-content: flex-start;
         justify-content: flex-start;
@@ -429,7 +403,7 @@ section{
         }
     }
     .detail{
-        color:#fff;
+        color:$primary;
         font-size:1em;
         @include bp-large{
             max-width: 48%;
@@ -438,7 +412,7 @@ section{
         display:block;
         margin: 32px 0 40px 0;
         p{
-            color: #fff;
+            //color: #fff;
         }
         &.dark{
             color: $primary !important;
