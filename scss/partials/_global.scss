@@ -9,12 +9,12 @@ body{
     margin: 0 !important;
     font: 17px/1.8em $opensans;
     color: $primary;
-    background-color: $background-color;
-
+		background: rgb(2,0,36);
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,83,83,1) 100%);
 }
 .inner-content{
 	max-width:87%;
-	margin:auto;	
+	margin:auto;
 }
 img{
 	max-width: 100%;
@@ -71,9 +71,10 @@ section{
 	overflow-x:hidden;
 	min-height:600px;
 	background-image:none;
-	backgroun-color:$background-color;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,83,83,1) 100%);
 	@include bp-small{
-		padding-top:18px !important;
+		padding-top:0px !important;
 		background-size:auto 665px;
 	}
 	@include bp-large{
@@ -271,19 +272,25 @@ section{
 }
 .fullwidth{
 	padding-top:56px;
-	.full-with-container{
-		margin-left:10px;
+	.full-width-container{
+	//	margin-left:10px;
+	width:100%;
+	&:before{
+		display:table;
+		content:'';
+	}
 		@include transition(all,1000);
 		display:flex;
 		.inner-content{
-			padding-left:10px;
+			width:100%;
 			.inner-content{
-
+			padding-left:10px;
 				border-left: 1px dotted #ff4525 !important;
 			}
 		}
 	}
 }
+
 .hero {
     background-color: $secondary;
     overflow: hidden;
@@ -996,7 +1003,7 @@ section{
     display:block !important;
 }
 .fifty-content a{
-    color:#c4d92e !important;
+    color:#2198d9 !important;
 }
 .fifty-left{
     float:left;
@@ -1255,7 +1262,8 @@ section{
 }
 .half-half{
     position:relative;
-    background-color:#fff;
+		background: rgb(2,0,36);
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,83,83,1) 100%);
     height:auto;
 }
 .half-half .half-image{
@@ -1274,7 +1282,7 @@ section{
     left:0;
 }
 .innerhalf{
-    background-color:#fff;
+    background-color:transparent;
 }
 .half-half h1{
     margin-left:50px;
@@ -1528,10 +1536,23 @@ input[type=submit].wpcf7-submit{
        background-color:$yellow !important;
    }
 }
+.spacer-row{
+	float:left;
+	clear:both;
+	min-height: 100px;
+	width:100%;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,83,83,1) 100%);
+}
 .feed-page{
-	margin:30px auto;
-	max-width: 80%;
+	margin:30px auto 0px;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,83,83,1) 100%);
 	padding-top:30px;
+	float:left;
+	.innter-content{
+		max-width: 80%;
+	}
 	.title{
 		img{
 			max-height:30px;
@@ -1580,4 +1601,10 @@ input[type=submit].wpcf7-submit{
 			}
 		}
 	}
+}
+.cform{
+	@include bp-large{
+		padding: 60px 30px 60px 60px;
+	}
+
 }

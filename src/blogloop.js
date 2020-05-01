@@ -13,7 +13,7 @@ const Blogloop = (props) =>{
     marginBottom:'0px'
   }
   return(
-    <div className="full-with-container">
+    <div className="full-width-container">
         <div className="inner-content">
 
             <h3 style={mb}><a href={'/blog/' + props.slug}>{HTML2React(props.title.rendered)}</a></h3>

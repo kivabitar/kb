@@ -189,14 +189,15 @@ class Form extends React.Component{
   }
   render() {
     const divstyle = {
-      margin: "30px"
+      margin: "30px 30px 30px 80px",
+
     }
     const buttonStyle = {
       border:'none'
     }
     return(
       <section className="inner-content">
-          <div className="inner-content" style={divstyle}>
+          <div className="inner-content cform" style={divstyle}>
 
             <div id="errortexthere"></div>
             <h2>Contact me</h2>

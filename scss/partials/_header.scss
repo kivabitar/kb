@@ -6,7 +6,8 @@
 	float:left;
 	height:auto;
 	z-index:100;
-	background:$white;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,83,83,1) 100%);
 	min-height:66px;
         @include bp-large{
             height:98px !Important;
@@ -76,18 +77,14 @@
 		}
 	}
 	@include bp-large{
-		padding: 0 10px;
+		padding: 10px 20px;
 		#logo{
-
-			//max-width:260px;
+			margin:0;
+			max-width:180px;
 		}
 	}
 	@include bp-xlarge{
-            padding: 10px 20px;
-		#logo{
-                        margin:0;
-			max-width:180px;
-		}
+
 	}
 	@include bp-xxlarge{
             padding: 10px 20px;

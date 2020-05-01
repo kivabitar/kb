@@ -38,23 +38,26 @@ function FeedPage({ feedsStore, location }) {
   });
   return (
     <div className="feed-page">
-      <h1 className="center title">
-        <img src='https://www.redditstatic.com/icon.png' /> {data.title}
-      </h1>
-      {listings.map((l, i) => {
-        return (
-          <Card key={i}>
-            <Card.Title className="card-title">{HTML2React(l.title)}</Card.Title>
-            <Card.Body>
-              <p>{HTML2React(removeBR(l.description))}</p>
-              <p>{HTML2React(l.content)}</p>
-              <Button variant="primary" onClick={openLink.bind(this, l.link)}>
-                Open
-              </Button>{" "}
-            </Card.Body>
-          </Card>
-        );
-      })}
+      <div className="inner-content">
+        <h2>News Feed via Reddit:</h2>
+        <h2 className="center title">
+          <img src='https://www.redditstatic.com/icon.png' /> {data.title}
+        </h2>
+        {listings.map((l, i) => {
+          return (
+            <Card key={i}>
+              <Card.Title className="card-title">{HTML2React(l.title)}</Card.Title>
+              <Card.Body>
+                <p>{HTML2React(removeBR(l.description))}</p>
+                <p>{HTML2React(l.content)}</p>
+                <Button variant="primary" onClick={openLink.bind(this, l.link)}>
+                  Open
+                </Button>{" "}
+              </Card.Body>
+            </Card>
+          );
+        })}
+      </div>
     </div>
   );
 }

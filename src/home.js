@@ -10,6 +10,7 @@ import Form from './simpleform.js';
 import Formsplit from './acf/formsplit.js';
 import Fiftyfifty from './acf/fiftyfifty.js'
 import FeedPage from './feedpage.js';
+import Spacer from './acf/spacer.js';
 import sdata from './data/home.json';
 
 class Home extends React.Component{
@@ -67,6 +68,11 @@ class Home extends React.Component{
       if(a.acf_fc_layout === 'half'){
       //  console.log(a);
         pageStuff.push(<Fiftyfifty {...a} key={i} />);
+        i++
+      }
+      if(a.acf_fc_layout === 'spacer'){
+      //  console.log(a);
+        pageStuff.push(<Spacer key={i} />);
         i++
       }
       if(a.acf_fc_layout === 'normal_content'){
