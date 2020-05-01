@@ -244,6 +244,7 @@ section{
 	width:100%;
 	h3 a{
 		color: $yellow;
+		text-decoration: none;
 		@include transition(all,.5s);
 		&:hover{
 			color: #fff;
@@ -264,7 +265,14 @@ section{
 		}
 	}
 }
-
+.blogtit a{
+	color: $yellow;
+	text-decoration: none;
+	@include transition(all, .5s);
+	&:hover{
+		color:#fff;
+	}
+}
 .hero {
     background-color: $secondary;
     overflow: hidden;

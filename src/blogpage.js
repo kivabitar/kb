@@ -17,10 +17,10 @@ const Blogpage = (props) =>{
   return(
     <section className="full-with-container " style={style}>
         <div className="row">
-            <h1 style={mb}><a href={'/blog/' + props.slug}>{HTML2React(props.title.rendered)}</a></h1>
+            <h1 style={mb} className="blogtit"><a href={'/blog/' + props.slug}>{HTML2React(props.title.rendered)}</a></h1>
             <span className="small">posted {d}</span>
             <div className="short-dash"></div>
-            <div className="inner-content">
+            <div className="inner-content bpost">
                 {HTML2React(props.content.rendered)}
             </div>
         </div>
