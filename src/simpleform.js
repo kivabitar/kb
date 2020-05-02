@@ -137,7 +137,7 @@ class Form extends React.Component{
       }).then(response => response.json())
       .then(myJSON => {
         console.table(myJSON);
-        this.setState({loading: "Thank you for reaching out! Someone from our team will be in touch soon!"});
+        this.setState({loading: "Thank you for reaching out! I will be in touch soon!"});
       });
     }else{
       //console.log("first name: "+ firstname + " last name: " + lastname + " Email: " + email)
