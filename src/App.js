@@ -3,6 +3,7 @@ import Menu from "./menu";
 import Header from "./header.js";
 import Footer from "./footer.js";
 import Home from "./home.js";
+import Bread from "./bread.js";
 import {BrowserRouter, Switch, Route } from 'react-router-dom';
 import Fourohfour from "./fourohfour.js";
 import Head from "./head.js";
@@ -48,6 +49,14 @@ class App extends React.Component {
               <Route exact path = '/'>
                 <Head title="Welcome to Kiva Bostrom's personal website | Web Dev and System Architect" />
                 <Home />
+              </Route>
+              <Route exact path = '/how-to-make-bread-part-1'>
+                <Head title="Welcome to Kiva Bostrom's personal website | How to make bread" />
+                <Bread slug="how-to-make-bread-part-1" />
+              </Route>
+              <Route exact path = '/how-to-make-bread-part-2'>
+                <Head title="Welcome to Kiva Bostrom's personal website | How to make bread" />
+                <Bread  slug="how-to-make-bread-part-2" />
               </Route>
               <Route exact path = '/blog'>
                 <Head title="Welcome to Kiva Bostrom's personal website | Web Dev and System Architect" />
