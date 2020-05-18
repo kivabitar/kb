@@ -30,7 +30,7 @@ function FeedPage({ feedsStore, location }) {
   };
   useEffect(() => {
     if (!initialized) {
-      const url = 'https://www.reddit.com/r/worldnews/.rss';
+      const url = 'https://www.reddit.com/r/Coronavirus/.rss';
     //  setUrl(url);
       getListings(url);
       setInitialized(true);
@@ -39,7 +39,7 @@ function FeedPage({ feedsStore, location }) {
   return (
     <div className="feed-page">
       <div className="inner-content">
-        <h2>News Feed via Reddit:</h2>
+        <h2>Coronavirus News Feed via Reddit:</h2>
         <h2 className="center title">
           <img src='https://www.redditstatic.com/icon.png' /> {data.title}
         </h2>
