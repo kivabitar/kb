@@ -1546,22 +1546,38 @@ input[type=submit].wpcf7-submit{
 		align-items: flex-start;
 		justify-content: flex-start;
 		flex-wrap: wrap;
-		margin-bottom:18px;
+		margin-bottom:28px;
 		.card-title{
 			font-weight: bold;
 			display:block;
 			width:100%;
 		}
 		.card-body{
-			display:block;
+			display:flex;
 			font-size:.8em;
 			width:100%;
+			flex-wrap:wrap;
+			align-items: flex-start;
+			justify-content: flex-start;
 			p{
-				margin-top:0px;
+				margin:10px 0 0 0;
+				width:100%;
 				display:inline-block;
 				a{
 					display:inline-block;
 					margin:0px 4px 0px 0px;
+				}
+			}
+			table{
+				display:block !important;
+				width:100%;
+				tr{
+					display:flex;
+					flex-wrap:wrap;
+					align-items: flex-start;
+					td{
+						width:100%;
+					}
 				}
 			}
 			p:nth-child(2){
